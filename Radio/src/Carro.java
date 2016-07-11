@@ -35,67 +35,10 @@ public class Carro {
     /**
      * 
      */
-    private int bot1;
-
-    /**
-     * 
-     */
-    private int bot2;
-
-    /**
-     * 
-     */
-    private int bot3;
-
-    /**
-     * 
-     */
-    private int bot4;
-
-    /**
-     * 
-     */
-    private int bot5;
-
-    /**
-     * 
-     */
-    private int bot6;
-
-    /**
-     * 
-     */
-    private int bot7;
-
-    /**
-     * 
-     */
-    private int bot8;
-
-    /**
-     * 
-     */
-    private int bot9;
-
-    /**
-     * 
-     */
-    private int bot10;
-
-    /**
-     * 
-     */
-    private int bot11;
-
-    /**
-     * 
-     */
-    private int bot12;
-
-
-    /**
-     * @return
-     */
+    private double botonesAM[];
+    
+    private double botonesFM[];
+    
     public void OnOff() {
         // TODO implement here
         return null;
