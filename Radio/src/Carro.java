@@ -1,14 +1,15 @@
 import java.util.*;
+import java.lang.*;
 
 public class Carro implements Radio{
     public Carro() {}
-    private float emisora;
+    private double emisora;
     private boolean estado;
     private boolean frecuencia;
     private double[] botonesAM;
     private double[] botonesFM;
     
-    public void setEmisora(float emisora){
+    public void setEmisora(double emisora){
         this.emisora = emisora;
     }
     
@@ -49,11 +50,16 @@ public class Carro implements Radio{
     }
     
     public void ON_OFF() {
-        
+        estado = !estado;
     }
 
     public void AM_FM() {
-        
+        frecuencia = !frecuencia;
+        if (frecuencia == true){
+            emisora = 89.7;
+        } else {
+            emisora = 530;
+        }
     }
 
     public void Cambio_de_Emisora(boolean frecuencia) {
