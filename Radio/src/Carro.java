@@ -1,103 +1,52 @@
-
 import java.util.*;
 
-/**
- * 
- */
-public class Carro {
-
-    /**
-     * 
-     */
-    public Carro() {
-    }
-
-    /**
-     * 
-     */
-    private boolean estado;
-
-    /**
-     * 
-     */
-    private boolean frecuencia;
-
-    /**
-     * 
-     */
+public class Carro implements Radio{
+    public Carro() {}
     private float emisora;
-
-    /**
-     * 
-     */
+    private boolean estado;
+    private boolean frecuencia;
     private boolean entrada;
-
-    /**
-     * 
-     */
     private double botonesAM[];
-    
     private double botonesFM[];
     
-    public void OnOff() {
-        // TODO implement here
-        return null;
+    public void setEmisora(float emisora){
+        this.emisora = emisora;
+    }
+    
+    public double getEmisora(){
+        return emisora;
+    }
+    
+    public void ON_OFF() {
+        
     }
 
-    /**
-     * @return
-     */
-    public void AmFM() {
-        // TODO implement here
-        return null;
+    public void AM_FM() {
+        
     }
 
-    /**
-     * @return
-     */
-    public void CambiarEmisora() {
-        // TODO implement here
-        return null;
+    public void Cambio_de_Emisora(boolean frecuencia) {
+        
     }
 
-    /**
-     * @return
-     */
-    public void GuardarEmisora() {
-        // TODO implement here
-        return null;
+    public void Guardar_Emisora(int boton) {
+        
     }
 
-    /**
-     * @return
-     */
-    public void SeleccionarEmisora() {
-        // TODO implement here
-        return null;
+    public void Seleccionar_emisora_guardada() {
+        
     }
 
-    /**
-     * @return
-     */
-    public void GuardarSeleccionar() {
-        // TODO implement here
-        return null;
+    public void Guardar_seleccion() {
+        
     }
 
-    /**
-     * @return
-     */
     public void MenuOn() {
-        // TODO implement here
-        return null;
+        
     }
 
-    /**
-     * @return
-     */
     public void MenuOff() {
-        // TODO implement here
-        return null;
+        
     }
 
 }
