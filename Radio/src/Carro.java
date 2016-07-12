@@ -63,38 +63,38 @@ public class Carro implements Radio{
     }
 
     public void Cambio_de_Emisora(boolean upDown) {
- +        if (frequencia == true && upDown == true){
- +            emisora = emisora + 10;
- +            if (emisora > 1610){
- +                emisora = 530;
- +            }
- +        }
- +        if (frequencia == true && upDown == false){
- +            emisora = emisora - 10;
- +            if (emisora < 530){
- +                emisora = 1610;
- +            }
- +        }
- +        if (frequencia == false && upDown == true){
- +            emisora = emisora + 0.2;
- +            if (emisora > 107.9){
- +                emisora = 87.9;
- +            }
- +        }
- +        if (frequencia == false && upDown == false){
- +            emisora = emisora - 0.2;
- +            if (emisora < 87.9){
- +                emisora = 107.9;
- +            }
- +        }
+        if (frequencia == true && upDown == true){
+             emisora = emisora + 10;
+             if (emisora > 1610){
+                 emisora = 530;
+             }
+         }
+         if (frequencia == true && upDown == false){
+             emisora = emisora - 10;
+             if (emisora < 530){
+                 emisora = 1610;
+             }
+         }
+         if (frequencia == false && upDown == true){
+             emisora = emisora + 0.2;
+             if (emisora > 107.9){
+                 emisora = 87.9;
+             }
+         }
+         if (frequencia == false && upDown == false){
+             emisora = emisora - 0.2;
+             if (emisora < 87.9){
+                 emisora = 107.9;
+             }
+         }
       }
   
       public void Guardar_Emisora(int boton) {
- +        if (frequencia == true){
- +            setBotonesAM(boton,emisora);
- +        } else{
- +            setBotonesFM(boton,emisora);
- +        }
+        if (frequencia == true){
+             setBotonesAM(boton,emisora);
+         } else{
+             setBotonesFM(boton,emisora);
+         }
       }
   
       public void Seleccionar_emisora_guardada() {
