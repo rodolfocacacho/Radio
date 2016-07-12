@@ -1,8 +1,9 @@
 public interface Radio{
-    public void OnOff();
-    public void AmFm();
-    public void CambiarEmisora();
-    public void GuardarEmisora();
-    public void SeleccionarEmisora();
-    public void GuardarSeleccionar();
+    public void ON_OFF();
+    public void AM_FM();
+    public void Cambio_de_Emisora(boolean a);
+    public void Guardar_Emisora(int x);
+    public void Seleccionar_emisora_guardada();
+    public void Guardar_seleccion();
+    public double getEmisora();
 }
