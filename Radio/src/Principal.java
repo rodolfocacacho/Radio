@@ -43,6 +43,8 @@ public class Principal {
         System.out.println("| INGRESE CARACTER PARA ACCIONAR	     |");
         System.out.println("|  [o] ENCENDER/APAGAR                       |");
         System.out.println("|  [a] CAMBIAR FRECUENCIA AM/FM		     |");
+        System.out.println("|  [j] CAMBIAR CAMBIAR EMISORA <-	     |");
+        System.out.println("|  [k] CAMBIAR CAMBIAR EMISORA ->	     |");        
         System.out.println("|  [x] SALIR                                 |");
         System.out.println("|                                            |");
     	System.out.println("+--------------------------------------------+");
@@ -76,6 +78,18 @@ public class Principal {
     			emisora = carro.getEmisora();
     		}
 
+    		if (i == 106 && estado != false){	/* si se ingrea j = 106 y no esta apagada la radio, se cambia la emisora hacia abajo */
+    			boolean jk = false;
+    			carro.Cambio_de_Emisora(jk);
+    			emisora = carro.getEmisora();
+    		}
+
+    		if (i == 107 && estado != false){	/* si se ingrea k = 107 y no esta apagada la radio, se cambia la emisora hacia arriba */
+    			boolean jk = true;
+    			carro.Cambio_de_Emisora(jk);
+    			emisora = carro.getEmisora();
+    		}
+
     		if(estado == true){					/* si el estado de encendido es true, el radio esta ON */
     			s = "[ON]";
     			emisora = carro.getEmisora();
@@ -85,7 +99,7 @@ public class Principal {
     		if (frecuencia == true){			/* si la frecuencia es true, el radio esta en FM */
     			f = "[FM]";
 				emisora = carro.getEmisora();
-				e = Double.toString(emisora);
+				e = String.format("%.1f", emisora); /* consultado de http://alvinalexander.com/programming/printf-format-cheat-sheet */
     		}
 
     		if (frecuencia == false){			/* si la frecuencia es false, el radio esta en AM */
@@ -112,6 +126,8 @@ public class Principal {
         System.out.println("| INGRESE CARACTER PARA ACCIONAR	     |");
         System.out.println("|  [o] ENCENDER/APAGAR                       |");
         System.out.println("|  [a] CAMBIAR FRECUENCIA AM/FM		     |");
+        System.out.println("|  [j] CAMBIAR CAMBIAR EMISORA <-	     |");
+        System.out.println("|  [k] CAMBIAR CAMBIAR EMISORA ->	     |");        
         System.out.println("|  [x] SALIR                                 |");
         System.out.println("|                                            |");
     	System.out.println("+--------------------------------------------+");
