@@ -104,7 +104,7 @@ public class Principal {
     			if (r >= 1 && r <= 12){
     				carro.Guardar_Emisora(r);
     	System.out.println("+--------------------------------------------+");
-        System.out.println("|     GUARDADO CON EXITO EN EL BOTON "+r+"  |");
+        System.out.println("|     GUARDADO CON EXITO EN EL BOTON "+r+"      |");
     	System.out.println("+--------------------------------------------+");
     			} else {
  		System.out.println("+--------------------------------------------+");
