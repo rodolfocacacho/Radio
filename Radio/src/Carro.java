@@ -56,57 +56,61 @@ public class Carro implements Radio{
     public void AM_FM() {
         frecuencia = !frecuencia;
         if (frecuencia == true){
-            emisora = 89.7;
+            emisora = 89.9;
         } else {
             emisora = 530;
         }
     }
 
     public void Cambio_de_Emisora(boolean upDown) {
-        if (frequencia == true && upDown == true){
+        if (frecuencia == true && upDown == true){
+             emisora = emisora + 0.2;
+             if (emisora > 107.9){
+                 emisora = 89.9;
+             }
+         }
+         if (frecuencia == true && upDown == false){
+             emisora = emisora - 0.2;
+             if (emisora < 89.9){
+                 emisora = 107.9;
+             }
+         }
+         if (frecuencia == false && upDown == true){
              emisora = emisora + 10;
              if (emisora > 1610){
                  emisora = 530;
              }
          }
-         if (frequencia == true && upDown == false){
+         if (frecuencia == false && upDown == false){
              emisora = emisora - 10;
              if (emisora < 530){
                  emisora = 1610;
              }
          }
-         if (frequencia == false && upDown == true){
-             emisora = emisora + 0.2;
-             if (emisora > 107.9){
-                 emisora = 87.9;
-             }
-         }
-         if (frequencia == false && upDown == false){
-             emisora = emisora - 0.2;
-             if (emisora < 87.9){
-                 emisora = 107.9;
-             }
-         }
       }
   
       public void Guardar_Emisora(int boton) {
-        if (frequencia == true){
+         if (frecuencia == true){
              botonesAM[boton] = emisora;
          } else{
              botonesFM[boton] = emisora;
          }
       }
-  
-      public void Seleccionar_emisora_guardada(int boton) {
-         if (frecuencia == false){
-             emisora = botonesAM[boton];
-         } else{
-             emisora = botonesFM[boton];
-         }
-     }
- 
-     public void Guardar_seleccion() {
-         
-     }
- 
- }
+
+    public void Seleccionar_emisora_guardada() {
+        
+    }
+
+    public void Guardar_seleccion() {
+        
+    }
+
+    public void MenuOn() {
+        
+    }
+
+    public void MenuOff() {
+        
+    }
+
+}
