@@ -96,7 +96,7 @@ public class Principal {
     		}
 
     		
-    		if (i == 103 && estado != false){	/* si se ingrea g = 103 y no esta apagada la radio, se cambia la emisora hacia arriba */
+    		if (i == 103 && estado != false){	/* si se ingrea g = 103 y no esta apagada la radio, se guarda una emisora en el boton del numero ingresado */
     	System.out.println("+--------------------------------------------+");
         System.out.println("|        INGRESE UN NUEMRO DEL 1 AL 12       |");
     	System.out.println("+--------------------------------------------+");
@@ -104,7 +104,7 @@ public class Principal {
     			if (r >= 1 && r <= 12){
     				carro.Guardar_Emisora(r);
     	System.out.println("+--------------------------------------------+");
-        System.out.println("|     GUARDADO CON EXITO EN EL BOTON "+r+"      |");
+        System.out.println("|     GUARDADO CON EXITO EN EL BOTON "+r+"       |");
     	System.out.println("+--------------------------------------------+");
     			} else {
  		System.out.println("+--------------------------------------------+");
@@ -112,6 +112,23 @@ public class Principal {
     	System.out.println("+--------------------------------------------+");
     			}
     		}
+
+            if (i == 115 && estado != false){   /* si se ingrea s = 115 y no esta apagada la radio, se selecciona una emisora en el boton del numero ingresado */
+        System.out.println("+--------------------------------------------+");
+        System.out.println("|        INGRESE UN NUEMRO DEL 1 AL 12       |");
+        System.out.println("+--------------------------------------------+");
+                r = input.nextInt();
+                if (r >= 1 && r <= 12){
+                    carro.Seleccionar_emisora_guardada(r);
+        System.out.println("+--------------------------------------------+");
+        System.out.println("|     SELECCIONADO CON EXITO EL BOTON "+r+"       |");
+        System.out.println("+--------------------------------------------+");
+                } else {
+        System.out.println("+--------------------------------------------+");
+        System.out.println("|            ERROR NUMERO INVALIDO           |");
+        System.out.println("+--------------------------------------------+");
+                }
+            }
 
     		if (frecuencia == true){			/* si la frecuencia es true, el radio esta en FM */
     			f = "[FM]";
