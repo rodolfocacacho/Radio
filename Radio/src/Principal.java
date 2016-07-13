@@ -17,10 +17,11 @@ public class Principal {
     	String f = "";
     	String e = "";
     	int i = 0;
+    	int r = 0;
 
-		InputStreamReader input = new InputStreamReader(System.in); /* cosultado de http://www.scit.wlv.ac.uk/~in8297/CP4044/workshops/w03.html */
-        BufferedReader console = new BufferedReader(input);			/* input de la consola convertido a int */
-    	
+		InputStreamReader reader = new InputStreamReader(System.in); /* cosultado de http://www.scit.wlv.ac.uk/~in8297/CP4044/workshops/w03.html */
+        BufferedReader console = new BufferedReader(reader);			/* input de la consola convertido a int */
+        Scanner input = new Scanner(System.in); 
 
     	while( i != 120){
 
@@ -29,7 +30,6 @@ public class Principal {
 
     	System.out.println("+--------------------------------------------+");
         System.out.println("|                 RADIO JAVA                 |");
-    	System.out.println("+--------------------------------------------+");
     	System.out.println("+--------------------------------------------+");
         System.out.println("|   "+s+"  [  ]  [  ]                        |");
         System.out.println("|                                            |");
@@ -43,8 +43,10 @@ public class Principal {
         System.out.println("| INGRESE CARACTER PARA ACCIONAR	     |");
         System.out.println("|  [o] ENCENDER/APAGAR                       |");
         System.out.println("|  [a] CAMBIAR FRECUENCIA AM/FM		     |");
-        System.out.println("|  [j] CAMBIAR EMISORA <-	             |");
-        System.out.println("|  [k] CAMBIAR EMISORA ->  	             |");        
+        System.out.println("|  [j] CAMBIAR EMISORA <-		     |");
+        System.out.println("|  [k] CAMBIAR EMISORA ->		     |");
+        System.out.println("|  [g] GUARDAR EMISORA                       |");
+        System.out.println("|  [s] SELECCIONAR EMISORA                   |");
         System.out.println("|  [x] SALIR                                 |");
         System.out.println("|                                            |");
     	System.out.println("+--------------------------------------------+");
@@ -54,6 +56,7 @@ public class Principal {
 
     try{										/* try y catch del input, solo funcionan los que estan definidos */
         	i = console.read();
+        	System.out.print("");
         }
         
         catch(IOException o){
@@ -69,8 +72,10 @@ public class Principal {
     		if (i == 111){						/* si se ingresa o = 111 en ASCII, se enciende o apaga la radio */
     			carro.ON_OFF();
     			estado = carro.getEstado();
-    			emisora = carro.getEmisora();
     		}
+
+    		if(estado == true){					/* si el estado de encendido es true, el radio esta ON */
+    			s = "[ON]";
 
     		if (i == 97 && estado != false){	/* si se ingrea a = 97 y no esta apagada la radio, se cambia de AM a FM y visceversa */
     			carro.AM_FM();
@@ -90,11 +95,23 @@ public class Principal {
     			emisora = carro.getEmisora();
     		}
 
-    		if(estado == true){					/* si el estado de encendido es true, el radio esta ON */
-    			s = "[ON]";
-    			emisora = carro.getEmisora();
-    			frecuencia = carro.getFrecuencia();
-
+    		
+    		if (i == 103 && estado != false){	/* si se ingrea g = 103 y no esta apagada la radio, se cambia la emisora hacia arriba */
+    	System.out.println("+--------------------------------------------+");
+        System.out.println("|        INGRESE UN NUEMRO DEL 1 AL 12       |");
+    	System.out.println("+--------------------------------------------+");
+    			r = input.nextInt();
+    			if (r >= 1 && r <= 12){
+    				carro.Guardar_Emisora(r);
+    	System.out.println("+--------------------------------------------+");
+        System.out.println("|     GUARDADO CON EXITO EN EL BOTON "+r+"  |");
+    	System.out.println("+--------------------------------------------+");
+    			} else {
+ 		System.out.println("+--------------------------------------------+");
+        System.out.println("|            ERROR NUMERO INVALIDO           |");
+    	System.out.println("+--------------------------------------------+");
+    			}
+    		}
 
     		if (frecuencia == true){			/* si la frecuencia es true, el radio esta en FM */
     			f = "[FM]";
@@ -108,11 +125,11 @@ public class Principal {
 				e = String.valueOf((int)emisora);
     		}
 
-    	
+    		
+    		
 
     	System.out.println("+--------------------------------------------+");
         System.out.println("|                 RADIO JAVA                 |");
-    	System.out.println("+--------------------------------------------+");
     	System.out.println("+--------------------------------------------+");
         System.out.println("|   "+s+"  "+f+"  ["+e+"]                       |");
         System.out.println("|                                            |");
@@ -126,8 +143,10 @@ public class Principal {
         System.out.println("| INGRESE CARACTER PARA ACCIONAR	     |");
         System.out.println("|  [o] ENCENDER/APAGAR                       |");
         System.out.println("|  [a] CAMBIAR FRECUENCIA AM/FM		     |");
-        System.out.println("|  [j] CAMBIAR CAMBIAR EMISORA <-	     |");
-        System.out.println("|  [k] CAMBIAR CAMBIAR EMISORA ->	     |");        
+        System.out.println("|  [j] CAMBIAR EMISORA <-		     |");
+        System.out.println("|  [k] CAMBIAR EMISORA ->		     |");
+        System.out.println("|  [g] GUARDAR EMISORA                       |");
+        System.out.println("|  [s] SELECCIONAR EMISORA                   |");
         System.out.println("|  [x] SALIR                                 |");
         System.out.println("|                                            |");
     	System.out.println("+--------------------------------------------+");
