@@ -56,7 +56,7 @@ public class Carro implements Radio{
     public void AM_FM() {
         frecuencia = !frecuencia;
         if (frecuencia == true){
-            emisora = 89.9;
+            emisora = 87.9;
         } else {
             emisora = 530;
         }
@@ -66,12 +66,12 @@ public class Carro implements Radio{
         if (frecuencia == true && upDown == true){
              emisora = emisora + 0.2;
              if (emisora > 107.9){
-                 emisora = 89.9;
+                 emisora = 87.9;
              }
          }
          if (frecuencia == true && upDown == false){
              emisora = emisora - 0.2;
-             if (emisora < 89.9){
+             if (emisora < 87.9){
                  emisora = 107.9;
              }
          }
@@ -90,11 +90,12 @@ public class Carro implements Radio{
       }
   
       public void Guardar_Emisora(int boton) {
-         if (frecuencia == true){
+          if (frecuencia == true){
              botonesAM[boton - 1] = emisora;
          } else{
              botonesFM[boton - 1] = emisora;
          }
+
       }
 
     public void Seleccionar_emisora_guardada(int boton) {
@@ -106,6 +107,14 @@ public class Carro implements Radio{
     }
 
     public void Guardar_seleccion() {
+        
+    }
+
+    public void MenuOn() {
+        
+    }
+
+    public void MenuOff() {
         
     }
 
