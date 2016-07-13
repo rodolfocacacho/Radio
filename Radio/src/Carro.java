@@ -97,8 +97,12 @@ public class Carro implements Radio{
          }
       }
   
-      public void Seleccionar_emisora_guardada() {
-         
+      public void Seleccionar_emisora_guardada(int boton) {
+         if (frecuencia == false){
+             emisora = botonesAM[boton];
+         } else{
+             emisora = botonesFM[boton];
+         }
      }
  
      public void Guardar_seleccion() {
