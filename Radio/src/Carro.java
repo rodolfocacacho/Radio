@@ -6,8 +6,10 @@ public class Carro implements Radio{
     private double emisora;
     private boolean estado;
     private boolean frecuencia;
-    private double[] botonesAM;
-    private double[] botonesFM;
+    private double[] botonesAM = new double[] {10,20,30,40,50,60,71,80,90,91};
+    private double[] botonesFM = new double[] {10,20,30,40,50,60,71,80,90,91};   
+
+
     
     public void setEmisora(double emisora){
         this.emisora = emisora;
@@ -34,7 +36,7 @@ public class Carro implements Radio{
     }
     
     public void setBotonesAM(int numBoton, double emisora){
-        botonesAM[numBoton] = emisora;
+        this.botonesAM[numBoton] = emisora;
     }
     
     public double getBotonesAM(int numBoton){
@@ -42,7 +44,7 @@ public class Carro implements Radio{
     }
     
         public void setBotonesFM(int numBoton, double emisora){
-        botonesFM[numBoton] = emisora;
+        this.botonesFM[numBoton] = emisora;
     }
     
     public double getBotonesFM(int numBoton){
@@ -90,10 +92,11 @@ public class Carro implements Radio{
       }
   
       public void Guardar_Emisora(int boton) {
+            boton = boton - 1;
           if (frecuencia == true){
-             botonesAM[boton - 1] = emisora;
+            setBotonesFM(boton,getEmisora());
          } else{
-             botonesFM[boton - 1] = emisora;
+            setBotonesAM(boton,getEmisora());
          }
 
       }
