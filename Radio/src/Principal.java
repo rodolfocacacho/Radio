@@ -43,8 +43,8 @@ public class Principal {
         System.out.println("| INGRESE CARACTER PARA ACCIONAR	     |");
         System.out.println("|  [o] ENCENDER/APAGAR                       |");
         System.out.println("|  [a] CAMBIAR FRECUENCIA AM/FM		     |");
-        System.out.println("|  [j] CAMBIAR CAMBIAR EMISORA <-	     |");
-        System.out.println("|  [k] CAMBIAR CAMBIAR EMISORA ->	     |");        
+        System.out.println("|  [j] CAMBIAR EMISORA <-	             |");
+        System.out.println("|  [k] CAMBIAR EMISORA ->  	             |");        
         System.out.println("|  [x] SALIR                                 |");
         System.out.println("|                                            |");
     	System.out.println("+--------------------------------------------+");
