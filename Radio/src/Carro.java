@@ -102,10 +102,11 @@ public class Carro implements Radio{
       }
 
     public void Seleccionar_emisora_guardada(int boton) {
+        boton = boton -1;
         if (frecuencia == false){
-            emisora = botonesAM[boton - 1];
+            emisora = botonesAM[boton];
         } else{
-            emisora = botonesFM[boton - 1];
+            emisora = botonesFM[boton];
         }
     }
 
@@ -113,12 +114,5 @@ public class Carro implements Radio{
         
     }
 
-    public void MenuOn() {
-        
-    }
-
-    public void MenuOff() {
-        
-    }
 
 }
