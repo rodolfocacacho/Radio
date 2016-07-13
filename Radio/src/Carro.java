@@ -6,8 +6,8 @@ public class Carro implements Radio{
     private double emisora;
     private boolean estado;
     private boolean frecuencia;
-    private double[] botonesAM = new double[] {10,20,30,40,50,60,71,80,90,91};
-    private double[] botonesFM = new double[] {10,20,30,40,50,60,71,80,90,91};   
+    private double[] botonesAM = new double[] {530,530,530,530,530,530,530,530,530,530};
+    private double[] botonesFM = new double[] {87.9,87.9,87.9,87.9,87.9,87.9,87.9,87.9,87.9,87.9};   
 
 
     

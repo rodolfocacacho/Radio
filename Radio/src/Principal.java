@@ -98,7 +98,7 @@ public class Principal {
     		
     		if (i == 103 && estado != false){	/* si se ingrea g = 103 y no esta apagada la radio, se guarda una emisora en el boton del numero ingresado */
     	System.out.println("+--------------------------------------------+");
-        System.out.println("|        INGRESE UN NUEMRO DEL 1 AL 12       |");
+        System.out.println("|        INGRESE UN NUMERO DEL 1 AL 12       |");
     	System.out.println("+--------------------------------------------+");
     			r = input.nextInt();
     			if (r >= 1 && r <= 12){
@@ -115,7 +115,7 @@ public class Principal {
 
             if (i == 115 && estado != false){   /* si se ingrea s = 115 y no esta apagada la radio, se selecciona una emisora en el boton del numero ingresado */
         System.out.println("+--------------------------------------------+");
-        System.out.println("|        INGRESE UN NUEMRO DEL 1 AL 12       |");
+        System.out.println("|        INGRESE UN NUMERO DEL 1 AL 12       |");
         System.out.println("+--------------------------------------------+");
                 r = input.nextInt();
                 if (r >= 1 && r <= 12){
