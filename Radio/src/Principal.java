@@ -13,6 +13,7 @@ public class Principal {
     	boolean estado = carro.getEstado();
     	boolean frecuencia = carro.getFrecuencia();
     	double emisora = carro.getEmisora();
+        carro.setEmisora(530);
     	String s = "";
     	String f = "";
     	String e = "";
@@ -42,11 +43,6 @@ public class Principal {
     	System.out.println("+--------------------------------------------+");
         System.out.println("| INGRESE CARACTER PARA ACCIONAR	     |");
         System.out.println("|  [o] ENCENDER/APAGAR                       |");
-        System.out.println("|  [a] CAMBIAR FRECUENCIA AM/FM		     |");
-        System.out.println("|  [j] CAMBIAR EMISORA <-		     |");
-        System.out.println("|  [k] CAMBIAR EMISORA ->		     |");
-        System.out.println("|  [g] GUARDAR EMISORA                       |");
-        System.out.println("|  [s] SELECCIONAR EMISORA                   |");
         System.out.println("|  [x] SALIR                                 |");
         System.out.println("|                                            |");
     	System.out.println("+--------------------------------------------+");
