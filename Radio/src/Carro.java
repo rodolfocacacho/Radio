@@ -10,7 +10,10 @@ public class Carro implements Radio{
     private double[] botonesFM = new double[] {87.9,87.9,87.9,87.9,87.9,87.9,87.9,87.9,87.9,87.9};   
 
 
-    
+    /*
+    *@param double emisora
+    *@return
+    */
     public void setEmisora(double emisora){
         this.emisora = emisora;
     }
